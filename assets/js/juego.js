@@ -25,8 +25,6 @@ const crearDeck = () => {
     deck = _.shuffle( deck );
 }
 
-crearDeck();
-
 // Saca una carta de la parte superior de la baraja.
 const pedirCarta = () => {
     
@@ -38,12 +36,8 @@ const pedirCarta = () => {
     return carta;
 }
 
-pedirCarta();
-
 const valorCarta = ( carta ) => {
 
     const valor = carta.substring(0, carta.length - 1);
     return ( isNaN( valor ) ) ? ( valor === 'A' ) ? 11 : 10 : Number(valor);
 }
-
-valorCarta('JD');
