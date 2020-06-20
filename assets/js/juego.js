@@ -27,6 +27,7 @@ const crearDeck = () => {
 
 crearDeck();
 
+// Saca una carta de la parte superior de la baraja.
 const pedirCarta = () => {
     
     if (deck.length === 0) {
@@ -38,3 +39,11 @@ const pedirCarta = () => {
 }
 
 pedirCarta();
+
+const valorCarta = ( carta ) => {
+
+    const valor = carta.substring(0, carta.length - 1);
+    return ( isNaN( valor ) ) ? ( valor === 'A' ) ? 11 : 10 : Number(valor);
+}
+
+valorCarta('JD');
