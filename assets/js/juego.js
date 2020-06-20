@@ -7,6 +7,7 @@ let deck = [];
 let tipos = ['C', 'D', 'H', 'S'];
 let especiales = ['A', 'J', 'Q', 'K'];
 
+// Crea una nueva baraja.
 const crearDeck = () => {
 
     for (let i = 2; i <= 10; i++) {
@@ -21,9 +22,19 @@ const crearDeck = () => {
         }
     }
 
-    console.log( deck );
     deck = _.shuffle( deck );
-    console.log( deck );
 }
 
 crearDeck();
+
+const pedirCarta = () => {
+    
+    if (deck.length === 0) {
+        throw 'No hay cartas en el deck' 
+    }
+
+    const carta = deck.pop();
+    return carta;
+}
+
+pedirCarta();
